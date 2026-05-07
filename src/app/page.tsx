@@ -183,18 +183,18 @@ const LeadershipTimeline = () => {
   ];
 
   return (
-    <section id="leadership" className="relative py-40 text-black dark:text-white overflow-hidden">
+    <section id="leadership" className="relative py-20 text-black dark:text-white overflow-hidden">
       <div className="absolute inset-0">
         <img src="/images/leadershipjourney.jpg" alt="Leadership Journey" className="w-full h-full object-cover opacity-20" />
         <div className="absolute inset-0 bg-gradient-to-b from-white dark:from-black via-white/80 dark:via-black/80 to-white dark:to-black" />
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-24 text-center">
+        <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-16 text-center">
           Leadership & Timeline
         </h2>
 
-        <div className="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-black/20 dark:before:via-white/20 before:to-transparent">
+        <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-black/20 dark:before:via-white/20 before:to-transparent">
           {milestones.map((item, i) => (
             <motion.div
               key={i}

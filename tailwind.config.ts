@@ -17,6 +17,7 @@ const config: Config = {
       animation: {
         "marquee-vertical": "marquee-vertical 20s linear infinite",
         "border-beam": "border-beam 2s linear infinite",
+        "marquee-horizontal": "marquee-horizontal 60s linear infinite",
       },
       keyframes: {
         "marquee-vertical": {
@@ -25,6 +26,10 @@ const config: Config = {
         },
         "border-beam": {
           "100%": { transform: "translateX(100%)" },
+        },
+        "marquee-horizontal": {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
         },
       },
     },

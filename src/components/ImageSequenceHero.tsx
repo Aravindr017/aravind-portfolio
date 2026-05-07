@@ -106,7 +106,7 @@ export default function ImageSequenceHero() {
         const img = images[frameIndex];
         const ctx = canvasRef.current.getContext("2d");
         
-        if (ctx && img && img.complete) {
+        if (ctx && img && img.complete && img.naturalWidth > 0) {
           ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
           drawImageProp(ctx, img, 0, 0, canvasRef.current.width, canvasRef.current.height);
         }
@@ -130,7 +130,7 @@ export default function ImageSequenceHero() {
       const img = images[frameIndex];
       const canvas = canvasRef.current;
       
-      if (canvas && img && img.complete) {
+      if (canvas && img && img.complete && img.naturalWidth > 0) {
         const ctx = canvas.getContext("2d");
         if (ctx) {
           ctx.clearRect(0, 0, canvas.width, canvas.height);
