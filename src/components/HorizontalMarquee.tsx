@@ -223,14 +223,14 @@ export default function HorizontalMarquee() {
   return (
     <section 
       id="projects"
-      className="relative w-full py-40 bg-zinc-950 text-white overflow-hidden flex items-center border-t border-white/10"
+      className="relative w-full py-40 bg-zinc-50 dark:bg-zinc-950 text-black dark:text-white overflow-hidden flex flex-col justify-center border-t border-black/10 dark:border-white/10"
     >
       <div className="relative z-10 w-full">
         <div className="px-6 md:px-24 mb-20">
-          <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-black dark:text-white mb-4">
             Technical Projects
           </h2>
-          <p className="text-white/60 text-lg">
+          <p className="text-black/60 dark:text-white/60 text-lg">
             "Innovative solutions combining cutting-edge technology with creative problem solving"
           </p>
         </div>
@@ -251,9 +251,9 @@ export default function HorizontalMarquee() {
               <div
                 key={`${project.id}-${idx}`}
                 onClick={() => setSelectedProject(project)}
-                className="group relative flex flex-col w-[350px] md:w-[450px] aspect-[4/3] rounded-3xl bg-black border border-white/10 hover:border-white/30 hover:scale-[1.02] transition-all duration-500 overflow-hidden cursor-pointer shadow-2xl"
+                className="group relative flex flex-col w-[350px] md:w-[450px] aspect-[4/3] rounded-3xl bg-white dark:bg-black border border-black/10 dark:border-white/10 hover:border-black/30 dark:hover:border-white/30 hover:scale-[1.02] transition-all duration-500 overflow-hidden cursor-pointer shadow-2xl"
               >
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors z-10" />
+                <div className="absolute inset-0 bg-white/40 dark:bg-black/40 group-hover:bg-transparent transition-colors z-10" />
                 
                 {/* Fallback color while image loads or if missing */}
                 <div className="absolute inset-0 bg-zinc-900" />
@@ -302,7 +302,7 @@ export default function HorizontalMarquee() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-xl"
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-white/80 dark:bg-black/80 backdrop-blur-xl"
             onClick={() => setSelectedProject(null)}
           >
             <motion.div 
@@ -316,13 +316,13 @@ export default function HorizontalMarquee() {
               {/* Close Button */}
               <button 
                 onClick={() => setSelectedProject(null)}
-                className="absolute top-4 right-4 z-50 w-10 h-10 bg-black/50 hover:bg-white/20 backdrop-blur-md border border-white/10 rounded-full flex items-center justify-center text-white transition-colors"
+                className="absolute top-4 right-4 z-50 w-10 h-10 bg-black/10 dark:bg-white/10 hover:bg-black/20 dark:hover:bg-white/20 backdrop-blur-md border border-black/10 dark:border-white/10 rounded-full flex items-center justify-center text-black dark:text-white transition-colors"
               >
                 ✕
               </button>
 
               {/* Left: Image */}
-              <div className="w-full md:w-1/2 h-64 md:h-auto relative bg-black">
+              <div className="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-between bg-white dark:bg-zinc-950" style={{ borderRight: '1px solid rgba(128,128,128,0.2)' }}>
                 <img 
                   src={selectedProject.image} 
                   alt={selectedProject.title} 
@@ -331,26 +331,26 @@ export default function HorizontalMarquee() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent md:bg-gradient-to-r" />
                 <div className="absolute bottom-6 left-6 right-6">
-                   <h2 className="text-3xl font-bold text-white mb-2">{selectedProject.title}</h2>
-                   <p className="text-white/70 font-mono text-sm">{selectedProject.tech}</p>
+                   <h3 className="text-3xl md:text-5xl font-bold text-black dark:text-white mb-6 tracking-tight">{selectedProject.title}</h3>
+                  <p className="text-lg text-black/70 dark:text-white/70 leading-relaxed font-light mb-8">{selectedProject.tech}</p>
                 </div>
               </div>
 
               {/* Right: Content */}
               <div className="w-full md:w-1/2 p-8 overflow-y-auto max-h-[90vh]">
                 <div className="mb-8">
-                  <h4 className="text-lg font-semibold text-white mb-3">Overview</h4>
-                  <p className="text-white/70 leading-relaxed text-sm">
+                  <h4 className="text-lg font-semibold text-black dark:text-white mb-3">Overview</h4>
+                  <p className="text-black/70 dark:text-white/70 leading-relaxed text-sm">
                     {selectedProject.description}
                   </p>
                 </div>
 
                 <div className="mb-8">
-                  <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
+                  <h4 className="text-lg font-semibold text-black dark:text-white mb-3">Key Features</h4>
                   <ul className="space-y-2">
                     {selectedProject.features.map((feature, i) => (
-                      <li key={i} className="flex items-start gap-3 text-sm text-white/70">
-                        <span className="text-white/40 mt-0.5">•</span>
+                      <li key={i} className="flex items-start gap-3 text-sm text-black/70 dark:text-white/70">
+                        <span className="text-black/40 dark:text-white/40 mt-0.5">•</span>
                         {feature}
                       </li>
                     ))}
@@ -358,10 +358,10 @@ export default function HorizontalMarquee() {
                 </div>
 
                 <div className="mb-8">
-                   <h4 className="text-lg font-semibold text-white mb-3">Tags</h4>
+                   <h4 className="text-lg font-semibold text-black dark:text-white mb-3">Tags</h4>
                    <div className="flex flex-wrap gap-2">
                       {selectedProject.tags.map(tag => (
-                        <span key={tag} className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-white/80">
+                        <span key={tag} className="px-4 py-1.5 rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-xs font-mono text-black/60 dark:text-white/60 mb-6 inline-block">
                           {tag}
                         </span>
                       ))}
@@ -369,7 +369,7 @@ export default function HorizontalMarquee() {
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-semibold text-white mb-3">Links & Documents</h4>
+                  <h4 className="text-lg font-semibold text-black dark:text-white mb-3">Links & Documents</h4>
                   <div className="flex flex-wrap gap-3">
                     {selectedProject.documents.map((doc, i) => (
                       <a 
@@ -377,7 +377,7 @@ export default function HorizontalMarquee() {
                         href={doc.url} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-2 bg-white text-black text-sm font-semibold rounded-full hover:bg-white/80 transition-colors"
+                        className="flex-1 bg-black text-white dark:bg-white dark:text-black py-4 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-black/80 dark:hover:bg-white/90 transition-colors"
                       >
                         {doc.type === "github" ? "GitHub" : doc.type === "external" ? "Live Demo" : "View Image/Cert"}
                       </a>

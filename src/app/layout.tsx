@@ -6,8 +6,8 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "AI Engineer Portfolio",
-  description: "Ultra-modern portfolio for an AI Engineer",
+  title: "Aravind R",
+  description: "Software Engineer | Ai/Ml | IEEE",
 };
 
 export default function RootLayout({

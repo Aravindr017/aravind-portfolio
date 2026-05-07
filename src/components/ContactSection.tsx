@@ -37,7 +37,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-32 px-6 bg-zinc-950 text-white relative border-t border-white/10">
+    <section id="contact" className="py-32 px-6 bg-zinc-50 dark:bg-zinc-950 text-black dark:text-white relative border-t border-black/10 dark:border-white/10">
       <div className="max-w-6xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 50 }}
@@ -47,7 +47,7 @@ export default function ContactSection() {
           className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Let's Build Something Amazing</h2>
-          <p className="text-white/60 text-lg max-w-2xl mx-auto">
+          <p className="text-black/60 dark:text-white/60 text-lg max-w-2xl mx-auto">
             I'm currently open to new opportunities, collaborations, or just a friendly chat about tech and innovation. Reach out and let's create something extraordinary together!
           </p>
         </motion.div>
@@ -61,26 +61,26 @@ export default function ContactSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1, ease: CUSTOM_EASING }}
-              className="p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl"
+              className="p-8 rounded-3xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 backdrop-blur-xl"
             >
-              <h3 className="text-xl font-semibold mb-2">Direct Contact</h3>
-              <p className="text-sm text-white/60 mb-6">Prefer direct communication? Here are the best ways to reach me quickly.</p>
+              <h3 className="text-xl font-semibold mb-2 text-black dark:text-white">Direct Contact</h3>
+              <p className="text-sm text-black/60 dark:text-white/60 mb-6">Prefer direct communication? Here are the best ways to reach me quickly.</p>
               
               <div className="flex flex-col gap-4">
-                <a href="mailto:ar986153@gmail.com" className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
-                  <span className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">✉️</span>
+                <a href="mailto:ar986153@gmail.com" className="flex items-center gap-3 text-black/80 dark:text-white/80 hover:text-white transition-colors">
+                  <span className="w-10 h-10 rounded-full bg-black/10 dark:bg-white/10 flex items-center justify-center shrink-0">✉️</span>
                   <span className="truncate">ar986153@gmail.com</span>
                 </a>
-                <a href="mailto:aravind17@ieee.org" className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
-                  <span className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">✉️</span>
+                <a href="mailto:aravind17@ieee.org" className="flex items-center gap-3 text-black/80 dark:text-white/80 hover:text-white transition-colors">
+                  <span className="w-10 h-10 rounded-full bg-black/10 dark:bg-white/10 flex items-center justify-center shrink-0">✉️</span>
                   <span className="truncate">aravind17@ieee.org</span>
                 </a>
-                <a href="tel:+916238177643" className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
-                  <span className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">📞</span>
+                <a href="tel:+916238177643" className="flex items-center gap-3 text-black/80 dark:text-white/80 hover:text-white transition-colors">
+                  <span className="w-10 h-10 rounded-full bg-black/10 dark:bg-white/10 flex items-center justify-center shrink-0">📞</span>
                   <span>+91 6238 177 643</span>
                 </a>
-                <a href="https://wa.me/+916238177643" target="_blank" className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
-                  <span className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">💬</span>
+                <a href="https://wa.me/+916238177643" target="_blank" className="flex items-center gap-3 text-black/80 dark:text-white/80 hover:text-white transition-colors">
+                  <span className="w-10 h-10 rounded-full bg-black/10 dark:bg-white/10 flex items-center justify-center shrink-0">💬</span>
                   <span>WhatsApp/Call</span>
                 </a>
               </div>
@@ -92,22 +92,22 @@ export default function ContactSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2, ease: CUSTOM_EASING }}
-              className="p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl"
+              className="p-8 rounded-3xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 backdrop-blur-xl"
             >
-              <h3 className="text-xl font-semibold mb-2">Social Profiles</h3>
-              <p className="text-sm text-white/60 mb-6">Connect with me on professional networks.</p>
+              <h3 className="text-xl font-semibold mb-2 text-black dark:text-white">Social Profiles</h3>
+              <p className="text-sm text-black/60 dark:text-white/60 mb-6">Connect with me on professional networks.</p>
               
               <div className="flex flex-col gap-4">
-                <a href="https://linkedin.com/in/aravindr017" target="_blank" className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
+                <a href="https://linkedin.com/in/aravindr017" target="_blank" className="flex items-center gap-3 text-black/80 dark:text-white/80 hover:text-white transition-colors">
                   <span className="w-10 h-10 rounded-full bg-[#0077b5]/20 text-[#0077b5] flex items-center justify-center shrink-0">in</span>
                   <span>LinkedIn Profile</span>
                 </a>
-                <a href="https://github.com/Aravindr017" target="_blank" className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
-                  <span className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">git</span>
+                <a href="https://github.com/Aravindr017" target="_blank" className="flex items-center gap-3 text-black/80 dark:text-white/80 hover:text-white transition-colors">
+                  <span className="w-10 h-10 rounded-full bg-black/10 dark:bg-white/10 flex items-center justify-center shrink-0">git</span>
                   <span>GitHub Projects</span>
                 </a>
-                <a href="https://x.com/aravindr_" target="_blank" className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
-                  <span className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">X</span>
+                <a href="https://x.com/aravindr_" target="_blank" className="flex items-center gap-3 text-black/80 dark:text-white/80 hover:text-white transition-colors">
+                  <span className="w-10 h-10 rounded-full bg-black/10 dark:bg-white/10 flex items-center justify-center shrink-0">X</span>
                   <span>Tech Thoughts</span>
                 </a>
               </div>
@@ -120,26 +120,26 @@ export default function ContactSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.3, ease: CUSTOM_EASING }}
-            className="lg:col-span-2 p-8 md:p-12 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl"
+            className="lg:col-span-2 p-8 md:p-12 rounded-3xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 backdrop-blur-xl"
           >
-            <h3 className="text-2xl font-semibold mb-2">Send a Message</h3>
-            <p className="text-sm text-white/60 mb-8">Have a project in mind or want to discuss opportunities? Send me a message and I'll get back to you within 24 hours.</p>
+            <h3 className="text-2xl font-semibold mb-2 text-black dark:text-white">Send a Message</h3>
+            <p className="text-sm text-black/60 dark:text-white/60 mb-8">Have a project in mind or want to discuss opportunities? Send me a message and I'll get back to you within 24 hours.</p>
 
             <form onSubmit={handleSubmit} className="flex flex-col gap-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="name" className="text-sm font-medium text-white/80">Your Name</label>
-                  <input type="text" id="name" name="from_name" placeholder="Enter your name" required className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/30 focus:outline-none focus:border-white/40 transition-colors" />
+                  <label htmlFor="name" className="text-sm font-medium text-black/80 dark:text-white/80">Your Name</label>
+                  <input type="text" id="name" name="from_name" placeholder="Enter your name" required className="w-full bg-black/5 dark:bg-black/40 border border-black/10 dark:border-white/10 rounded-xl px-4 py-3 text-black dark:text-white placeholder:text-black/30 dark:placeholder:text-white/30 focus:outline-none focus:border-black/40 dark:focus:border-white/40 transition-colors" />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="email" className="text-sm font-medium text-white/80">Email Address</label>
-                  <input type="email" id="email" name="from_email" placeholder="your.email@example.com" required className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/30 focus:outline-none focus:border-white/40 transition-colors" />
+                  <label htmlFor="email" className="text-sm font-medium text-black/80 dark:text-white/80">Email Address</label>
+                  <input type="email" id="email" name="from_email" placeholder="your.email@example.com" required className="w-full bg-black/5 dark:bg-black/40 border border-black/10 dark:border-white/10 rounded-xl px-4 py-3 text-black dark:text-white placeholder:text-black/30 dark:placeholder:text-white/30 focus:outline-none focus:border-black/40 dark:focus:border-white/40 transition-colors" />
                 </div>
               </div>
 
               <div className="flex flex-col gap-2">
-                <label htmlFor="subject" className="text-sm font-medium text-white/80">What would you like to discuss?</label>
-                <select id="subject" name="subject" required className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white/40 transition-colors appearance-none">
+                <label htmlFor="subject" className="text-sm font-medium text-black/80 dark:text-white/80">What would you like to discuss?</label>
+                <select id="subject" name="subject" required className="w-full bg-black/5 dark:bg-black/40 border border-black/10 dark:border-white/10 rounded-xl px-4 py-3 text-black dark:text-white focus:outline-none focus:border-black/40 dark:focus:border-white/40 transition-colors appearance-none">
                   <option value="" disabled className="text-black">Select topic</option>
                   <option value="Project Collaboration" className="text-black">Project Collaboration</option>
                   <option value="Job Opportunity" className="text-black">Job Opportunity</option>
@@ -150,8 +150,8 @@ export default function ContactSection() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <label htmlFor="message" className="text-sm font-medium text-white/80">Your Message</label>
-                <textarea id="message" name="message" rows={5} placeholder="Hi Aravind, I'd like to discuss..." required className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/30 focus:outline-none focus:border-white/40 transition-colors resize-none"></textarea>
+                <label htmlFor="message" className="text-sm font-medium text-black/80 dark:text-white/80">Your Message</label>
+                <textarea id="message" name="message" rows={5} placeholder="Hi Aravind, I'd like to discuss..." required className="w-full bg-black/5 dark:bg-black/40 border border-black/10 dark:border-white/10 rounded-xl px-4 py-3 text-black dark:text-white placeholder:text-black/30 dark:placeholder:text-white/30 focus:outline-none focus:border-black/40 dark:focus:border-white/40 transition-colors resize-none"></textarea>
               </div>
 
               <input type="hidden" name="email_subject" value="New Message from Portfolio" />
@@ -159,7 +159,7 @@ export default function ContactSection() {
               <button 
                 type="submit" 
                 disabled={isSending}
-                className="w-full md:w-auto self-start mt-2 px-8 py-4 rounded-full bg-white text-black font-semibold hover:bg-white/90 disabled:opacity-50 transition-colors flex items-center justify-center gap-2"
+                className="w-full bg-black text-white dark:bg-white dark:text-black font-semibold py-4 rounded-xl hover:bg-black/80 dark:hover:bg-white/90 transition-all active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 {isSending ? "Sending..." : "Send Message"}
               </button>

@@ -139,7 +139,7 @@ export default function AchievementsSection() {
   };
 
   return (
-    <section id="achievements" className="py-32 px-6 bg-black text-white relative border-t border-white/10">
+    <section id="achievements" className="py-32 px-6 bg-white dark:bg-black text-black dark:text-white relative border-t border-black/10 dark:border-white/10">
       <div className="max-w-7xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 50 }}
@@ -151,7 +151,7 @@ export default function AchievementsSection() {
           <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-4">
             My Achievements
           </h2>
-          <p className="text-white/60 text-lg max-w-2xl mx-auto">
+          <p className="text-black/60 dark:text-white/60 text-lg max-w-2xl mx-auto">
             "Recognition of technical excellence and leadership through awards and accomplishments"
           </p>
         </motion.div>
@@ -170,33 +170,33 @@ export default function AchievementsSection() {
               <div className="absolute -top-24 -right-24 w-48 h-48 bg-white/5 rounded-full blur-3xl group-hover:bg-white/10 transition-colors" />
 
               <div className="flex items-start justify-between mb-6 relative z-10">
-                <div className="w-12 h-12 rounded-2xl bg-black/50 border border-white/10 flex items-center justify-center text-2xl shadow-inner">
+                <div className="w-12 h-12 rounded-2xl bg-black/5 dark:bg-black/50 border border-black/10 dark:border-white/10 flex items-center justify-center text-2xl shadow-inner">
                   {ach.icon}
                 </div>
               </div>
 
-              <h3 className="text-xl font-bold text-white mb-2 relative z-10">
+              <h3 className="text-xl font-bold text-black dark:text-white mb-2 relative z-10">
                 {ach.title}
               </h3>
-              <p className="text-sm font-mono text-white/50 mb-6 relative z-10">
+              <p className="text-sm font-mono text-black/50 dark:text-white/50 mb-6 relative z-10">
                 {ach.date}
               </p>
 
               <ul className="flex-1 space-y-3 mb-8 relative z-10">
                 {ach.bullets.map((bullet, i) => (
-                  <li key={i} className="flex items-start gap-3 text-sm text-white/70">
-                    <span className="text-white/40 mt-1 text-[10px]">■</span>
+                  <li key={i} className="flex items-start gap-3 text-sm text-black/70 dark:text-white/70">
+                    <span className="text-black/40 dark:text-white/40 mt-1 text-[10px]">■</span>
                     {bullet}
                   </li>
                 ))}
               </ul>
 
               <div className="mt-auto relative z-10">
-                <div className="flex justify-between text-xs font-semibold text-white/60 uppercase tracking-wider mb-2">
+                <div className="flex justify-between text-xs font-semibold text-black/60 dark:text-white/60 uppercase tracking-wider mb-2">
                   <span>{ach.status}</span>
                   <span>{ach.progressText}</span>
                 </div>
-                <div className="w-full h-1.5 bg-black/50 rounded-full overflow-hidden mb-6">
+                <div className="w-full h-1.5 bg-black/10 dark:bg-black/50 rounded-full overflow-hidden mb-6">
                   <motion.div 
                     initial={{ width: 0 }}
                     whileInView={{ width: "100%" }}
@@ -209,7 +209,7 @@ export default function AchievementsSection() {
                   href={ach.docUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/10 rounded-full text-sm font-medium text-white transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-black/10 dark:bg-white/10 hover:bg-black/20 dark:hover:bg-white/20 border border-black/10 dark:border-white/10 rounded-full text-sm font-medium text-black dark:text-white transition-colors"
                 >
                   <img src={ach.docImage} alt="Certificate" className="w-4 h-4 rounded-sm object-cover opacity-80 hidden" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                   View Certificate/Photo
