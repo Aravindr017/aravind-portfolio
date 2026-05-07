@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
-import SmoothScroll from "@/components/SmoothScroll";
+
 import HorizontalMarquee from "@/components/HorizontalMarquee";
 import ImageSequenceHero from "@/components/ImageSequenceHero";
 import ContactSection from "@/components/ContactSection";
@@ -275,7 +275,7 @@ const MetricsAndEndorsement = () => {
 
 export default function Page() {
   return (
-    <SmoothScroll>
+    <main>
       <div className="bg-black text-white min-h-screen selection:bg-white selection:text-black font-sans antialiased">
         <FloatingNavBar />
 
@@ -299,6 +299,6 @@ export default function Page() {
 
         <Footer />
       </div>
-    </SmoothScroll>
+    </main>
   );
 }
