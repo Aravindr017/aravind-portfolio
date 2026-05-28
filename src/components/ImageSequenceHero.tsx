@@ -69,27 +69,46 @@ export default function ImageSequenceHero() {
     ctx.drawImage(img, cx, cy, cw, ch, x, y, w, h);
   }
 
-  // Preload images
+  // Progressive Preload images to prevent network throttling
   useEffect(() => {
     const loadedImages: HTMLImageElement[] = [];
+    let loadedCount = 0;
     
-    for (let i = 1; i <= FRAME_COUNT; i++) {
-      const img = new Image();
-      const num = i.toString().padStart(3, "0");
-      img.src = `/images/herosection/ezgif-frame-${num}.png`;
-      
-      img.onload = () => {
-        if (i === 1 && canvasRef.current) {
-          const ctx = canvasRef.current.getContext("2d");
-          if (ctx) {
-            canvasRef.current.width = window.innerWidth;
-            canvasRef.current.height = window.innerHeight;
-            drawImageProp(ctx, img, 0, 0, canvasRef.current.width, canvasRef.current.height);
+    // Function to load a specific range of images
+    const loadBatch = (start: number, end: number, callback?: () => void) => {
+      for (let i = start; i <= end; i++) {
+        const img = new Image();
+        const num = i.toString().padStart(3, "0");
+        // Cloudinary optimized URL
+        img.src = `https://res.cloudinary.com/dxlqjiqvn/image/upload/f_auto,q_auto,w_1920/v1778192624/ezgif-frame-${num}.png`;
+        
+        img.onload = () => {
+          loadedCount++;
+          if (i === 1 && canvasRef.current) {
+            const ctx = canvasRef.current.getContext("2d");
+            if (ctx) {
+              canvasRef.current.width = window.innerWidth;
+              canvasRef.current.height = window.innerHeight;
+              drawImageProp(ctx, img, 0, 0, canvasRef.current.width, canvasRef.current.height);
+            }
           }
-        }
-      };
-      loadedImages.push(img);
-    }
+          // If this batch is done, trigger the callback
+          if (loadedCount === end && callback) {
+            callback();
+          }
+        };
+        loadedImages[i - 1] = img; // Keep order
+      }
+    };
+
+    // Load first 30 frames immediately for the hero entrance
+    loadBatch(1, 30, () => {
+      // Once first 30 are loaded, slowly load the rest in the background
+      setTimeout(() => {
+        loadBatch(31, FRAME_COUNT);
+      }, 1000);
+    });
+
     setImages(loadedImages);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

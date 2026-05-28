@@ -223,7 +223,7 @@ export default function HorizontalMarquee() {
   return (
     <section 
       id="projects"
-      className="relative w-full py-40 bg-zinc-50 dark:bg-zinc-950 text-black dark:text-white overflow-hidden flex flex-col justify-center border-t border-black/10 dark:border-white/10"
+      className="relative w-full py-40 bg-zinc-50 dark:bg-zinc-950 text-black dark:text-white overflow-hidden flex flex-col justify-center border-t border-black/10 dark:border-white/10 scroll-mt-24"
     >
       <div className="relative z-10 w-full">
         <div className="px-6 md:px-24 mb-20">
@@ -310,34 +310,34 @@ export default function HorizontalMarquee() {
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.95, opacity: 0, y: 20 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="relative w-full max-w-4xl max-h-[90vh] bg-zinc-900 border border-white/10 rounded-3xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] flex flex-col md:flex-row"
+              className="relative w-full max-w-4xl max-h-[90vh] bg-white dark:bg-zinc-900 border border-black/10 dark:border-white/10 rounded-3xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] flex flex-col md:flex-row"
               onClick={e => e.stopPropagation()}
             >
               {/* Close Button */}
               <button 
                 onClick={() => setSelectedProject(null)}
-                className="absolute top-4 right-4 z-50 w-10 h-10 bg-black/10 dark:bg-white/10 hover:bg-black/20 dark:hover:bg-white/20 backdrop-blur-md border border-black/10 dark:border-white/10 rounded-full flex items-center justify-center text-black dark:text-white transition-colors"
+                className="absolute top-4 right-4 z-50 w-10 h-10 bg-black/5 dark:bg-white/10 hover:bg-black/10 dark:hover:bg-white/20 backdrop-blur-md border border-black/10 dark:border-white/10 rounded-full flex items-center justify-center text-black dark:text-white transition-colors"
               >
                 ✕
               </button>
 
               {/* Left: Image */}
-              <div className="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-between bg-white dark:bg-zinc-950" style={{ borderRight: '1px solid rgba(128,128,128,0.2)' }}>
+              <div className="relative w-full md:w-1/2 min-h-[300px] md:min-h-0 flex flex-col justify-end p-8 md:p-12 border-b md:border-b-0 md:border-r border-black/10 dark:border-white/10 bg-zinc-900 overflow-hidden">
                 <img 
                   src={selectedProject.image} 
                   alt={selectedProject.title} 
-                  className="absolute inset-0 w-full h-full object-cover opacity-80"
+                  className="absolute inset-0 w-full h-full object-cover opacity-70"
                   onError={(e) => { e.currentTarget.style.display = 'none'; }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent md:bg-gradient-to-r" />
-                <div className="absolute bottom-6 left-6 right-6">
-                   <h3 className="text-3xl md:text-5xl font-bold text-black dark:text-white mb-6 tracking-tight">{selectedProject.title}</h3>
-                  <p className="text-lg text-black/70 dark:text-white/70 leading-relaxed font-light mb-8">{selectedProject.tech}</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-0" />
+                <div className="relative z-10 mt-auto">
+                   <h3 className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight">{selectedProject.title}</h3>
+                  <p className="text-lg text-white/80 leading-relaxed font-light">{selectedProject.tech}</p>
                 </div>
               </div>
 
               {/* Right: Content */}
-              <div className="w-full md:w-1/2 p-8 overflow-y-auto max-h-[90vh]">
+              <div className="w-full md:w-1/2 p-8 md:p-10 overflow-y-auto max-h-[60vh] md:max-h-[90vh]">
                 <div className="mb-8">
                   <h4 className="text-lg font-semibold text-black dark:text-white mb-3">Overview</h4>
                   <p className="text-black/70 dark:text-white/70 leading-relaxed text-sm">
@@ -361,7 +361,7 @@ export default function HorizontalMarquee() {
                    <h4 className="text-lg font-semibold text-black dark:text-white mb-3">Tags</h4>
                    <div className="flex flex-wrap gap-2">
                       {selectedProject.tags.map(tag => (
-                        <span key={tag} className="px-4 py-1.5 rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-xs font-mono text-black/60 dark:text-white/60 mb-6 inline-block">
+                        <span key={tag} className="px-4 py-1.5 rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-xs font-mono text-black/70 dark:text-white/70 inline-block">
                           {tag}
                         </span>
                       ))}
@@ -377,9 +377,9 @@ export default function HorizontalMarquee() {
                         href={doc.url} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="flex-1 bg-black text-white dark:bg-white dark:text-black py-4 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-black/80 dark:hover:bg-white/90 transition-colors"
+                        className="flex-1 min-w-[120px] bg-black text-white dark:bg-white dark:text-black py-3 rounded-xl text-sm font-semibold flex items-center justify-center gap-2 hover:bg-black/80 dark:hover:bg-white/90 transition-colors"
                       >
-                        {doc.type === "github" ? "GitHub" : doc.type === "external" ? "Live Demo" : "View Image/Cert"}
+                        {doc.type === "github" ? "GitHub" : doc.type === "external" ? "Live Demo" : "View Details"}
                       </a>
                     ))}
                   </div>

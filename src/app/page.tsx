@@ -38,7 +38,7 @@ const FloatingNavBar = () => {
           animate={{ y: 0, opacity: 1, x: "-50%", scale: 1 }}
           exit={{ y: -100, opacity: 0, x: "-50%", scale: 0.8 }}
           transition={{ duration: 0.6, ease: CUSTOM_EASING }}
-          className="fixed top-6 left-1/2 z-50 flex items-center gap-4 md:gap-6 px-6 py-4 rounded-[2rem] bg-white/40 dark:bg-black/40 backdrop-blur-3xl border border-black/10 dark:border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.2)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.5)]"
+          className="fixed top-6 left-1/2 z-50 flex items-center gap-3 md:gap-6 px-4 md:px-6 py-3 md:py-4 rounded-[2rem] bg-white/40 dark:bg-black/40 backdrop-blur-3xl border border-black/10 dark:border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.2)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.5)] max-w-[95vw] md:max-w-none overflow-x-auto whitespace-nowrap scrollbar-hide"
         >
           {["About", "Projects", "Skills", "Achievements", "Leadership", "Contact"].map((item) => (
             <a
@@ -72,7 +72,7 @@ const BioSection = () => {
   const opacityText = useTransform(scrollYProgress, [0.1, 0.3], [0, 1]);
 
   return (
-    <section id="about" className="relative min-h-[150vh] bg-white dark:bg-black">
+    <section id="about" className="relative min-h-[150vh] bg-white dark:bg-black scroll-mt-24">
       <div className="sticky top-0 min-h-screen w-full overflow-hidden flex items-center justify-center py-20">
 
         {/* Background Layer: Old Image */}
@@ -140,7 +140,7 @@ const SkillsMatrix = () => {
   ];
 
   return (
-    <section id="skills" className="py-40 bg-zinc-50 dark:bg-zinc-950 text-black dark:text-white relative">
+    <section id="skills" className="py-40 bg-zinc-50 dark:bg-zinc-950 text-black dark:text-white relative scroll-mt-24">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-20 text-center">
           Technical Skill Matrix
@@ -183,7 +183,7 @@ const LeadershipTimeline = () => {
   ];
 
   return (
-    <section id="leadership" className="relative py-20 text-black dark:text-white overflow-hidden">
+    <section id="leadership" className="relative py-20 text-black dark:text-white overflow-hidden scroll-mt-24">
       <div className="absolute inset-0">
         <img src="/images/leadershipjourney.jpg" alt="Leadership Journey" className="w-full h-full object-cover opacity-20" />
         <div className="absolute inset-0 bg-gradient-to-b from-white dark:from-black via-white/80 dark:via-black/80 to-white dark:to-black" />

@@ -139,7 +139,7 @@ export default function AchievementsSection() {
   };
 
   return (
-    <section id="achievements" className="py-32 px-6 bg-white dark:bg-black text-black dark:text-white relative border-t border-black/10 dark:border-white/10">
+    <section id="achievements" className="py-32 px-6 bg-white dark:bg-black text-black dark:text-white relative border-t border-black/10 dark:border-white/10 scroll-mt-24">
       <div className="max-w-7xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 50 }}

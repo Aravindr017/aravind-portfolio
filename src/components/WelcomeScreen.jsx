@@ -59,13 +59,13 @@ const WelcomeScreen = ({ onFinish }) => {
             {messages[currentMessage].lang}
           </div>
         </div>
-        
+
         <div className="progress-container">
           <div className="progress-bar" style={{ width: `${progress}%` }}></div>
         </div>
-        
+
         <div className="loading-text">
-          Loading amazing content
+          Loading...
           <span className="dots">
             <span>.</span>
             <span>.</span>

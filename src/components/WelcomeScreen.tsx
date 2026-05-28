@@ -92,7 +92,7 @@ export default function WelcomeScreen({ onFinish }: { onFinish: () => void }) {
         </div>
 
         <div className="text-white/40 text-sm font-mono flex items-center gap-1">
-          Loading amazing content
+          Loading...
           <span className="flex">
             <motion.span animate={{ opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 1.5, delay: 0 }}>.</motion.span>
             <motion.span animate={{ opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 1.5, delay: 0.5 }}>.</motion.span>
