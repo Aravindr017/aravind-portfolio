@@ -3,17 +3,9 @@
 out/
 
 # Assets (Excluded to keep repo small)
-public/images/
+public/images/herosection/
+public/images/hero section/
 public/videos/
-public/documents/
-*.pdf
-*.jpg
-*.jpeg
-*.png
-*.gif
-*.svg
-*.mp4
-*.mov
 
 # Node modules
 node_modules/
