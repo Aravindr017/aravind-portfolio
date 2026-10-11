@@ -221,26 +221,29 @@ export default function HorizontalMarquee() {
   const displayProjects = [...PROJECTS, ...PROJECTS];
 
   return (
-    <section 
+    <section
       id="projects"
-      className="relative w-full py-40 bg-zinc-50 dark:bg-zinc-950 text-black dark:text-white overflow-hidden flex flex-col justify-center border-t border-black/10 dark:border-white/10 scroll-mt-24"
+      className="relative w-full py-24 md:py-32 bg-slate-50 dark:bg-zinc-950 text-zinc-900 dark:text-white overflow-hidden flex flex-col justify-center border-t border-zinc-200 dark:border-white/10 scroll-mt-32 transition-colors duration-300"
     >
       <div className="relative z-10 w-full">
-        <div className="px-6 md:px-24 mb-20">
-          <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-black dark:text-white mb-4">
+        <div className="max-w-7xl mx-auto px-6 text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-200/70 dark:bg-white/10 border border-zinc-300 dark:border-white/20 mb-4">
+            <span className="text-xs font-semibold tracking-wider text-zinc-800 dark:text-white/90 uppercase">Portfolio</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white mb-3">
             Technical Projects
           </h2>
-          <p className="text-black/60 dark:text-white/60 text-lg">
+          <p className="text-zinc-600 dark:text-white/60 text-base md:text-lg max-w-2xl mx-auto">
             "Innovative solutions combining cutting-edge technology with creative problem solving"
           </p>
         </div>
 
-        <div 
-          className="w-full relative overflow-hidden py-10"
+        <div
+          className="w-full relative overflow-hidden py-6"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <div 
+          <div
             className="flex gap-8 w-max px-8"
             style={{
               animation: "marquee-horizontal 60s linear infinite",
@@ -251,22 +254,22 @@ export default function HorizontalMarquee() {
               <div
                 key={`${project.id}-${idx}`}
                 onClick={() => setSelectedProject(project)}
-                className="group relative flex flex-col w-[350px] md:w-[450px] aspect-[4/3] rounded-3xl bg-white dark:bg-black border border-black/10 dark:border-white/10 hover:border-black/30 dark:hover:border-white/30 hover:scale-[1.02] transition-all duration-500 overflow-hidden cursor-pointer shadow-2xl"
+                className="group relative flex flex-col w-[350px] md:w-[450px] aspect-[4/3] rounded-3xl bg-zinc-900 border border-white/10 hover:border-white/30 hover:scale-[1.02] transition-all duration-500 overflow-hidden cursor-pointer shadow-2xl"
               >
-                <div className="absolute inset-0 bg-white/40 dark:bg-black/40 group-hover:bg-transparent transition-colors z-10" />
-                
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors z-10" />
+
                 {/* Fallback color while image loads or if missing */}
                 <div className="absolute inset-0 bg-zinc-900" />
-                
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
+
+                <img
+                  src={project.image}
+                  alt={project.title}
                   onError={(e) => { e.currentTarget.style.display = 'none'; }}
-                  className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-700" 
+                  className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-700"
                 />
-                
+
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-10" />
-                
+
                 <div className="relative z-20 flex flex-col justify-end h-full p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                   <div className="flex flex-wrap gap-2 mb-3">
                     {project.tags.slice(0, 2).map(tag => (
@@ -298,14 +301,14 @@ export default function HorizontalMarquee() {
       {/* --- Project Details Modal --- */}
       <AnimatePresence>
         {selectedProject && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-white/80 dark:bg-black/80 backdrop-blur-xl"
             onClick={() => setSelectedProject(null)}
           >
-            <motion.div 
+            <motion.div
               initial={{ scale: 0.95, opacity: 0, y: 20 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.95, opacity: 0, y: 20 }}
@@ -314,7 +317,7 @@ export default function HorizontalMarquee() {
               onClick={e => e.stopPropagation()}
             >
               {/* Close Button */}
-              <button 
+              <button
                 onClick={() => setSelectedProject(null)}
                 className="absolute top-4 right-4 z-50 w-10 h-10 bg-black/5 dark:bg-white/10 hover:bg-black/10 dark:hover:bg-white/20 backdrop-blur-md border border-black/10 dark:border-white/10 rounded-full flex items-center justify-center text-black dark:text-white transition-colors"
               >
@@ -323,15 +326,15 @@ export default function HorizontalMarquee() {
 
               {/* Left: Image */}
               <div className="relative w-full md:w-1/2 min-h-[300px] md:min-h-0 flex flex-col justify-end p-8 md:p-12 border-b md:border-b-0 md:border-r border-black/10 dark:border-white/10 bg-zinc-900 overflow-hidden">
-                <img 
-                  src={selectedProject.image} 
-                  alt={selectedProject.title} 
+                <img
+                  src={selectedProject.image}
+                  alt={selectedProject.title}
                   className="absolute inset-0 w-full h-full object-cover opacity-70"
                   onError={(e) => { e.currentTarget.style.display = 'none'; }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-0" />
                 <div className="relative z-10 mt-auto">
-                   <h3 className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight">{selectedProject.title}</h3>
+                  <h3 className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight">{selectedProject.title}</h3>
                   <p className="text-lg text-white/80 leading-relaxed font-light">{selectedProject.tech}</p>
                 </div>
               </div>
@@ -358,24 +361,24 @@ export default function HorizontalMarquee() {
                 </div>
 
                 <div className="mb-8">
-                   <h4 className="text-lg font-semibold text-black dark:text-white mb-3">Tags</h4>
-                   <div className="flex flex-wrap gap-2">
-                      {selectedProject.tags.map(tag => (
-                        <span key={tag} className="px-4 py-1.5 rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-xs font-mono text-black/70 dark:text-white/70 inline-block">
-                          {tag}
-                        </span>
-                      ))}
-                   </div>
+                  <h4 className="text-lg font-semibold text-black dark:text-white mb-3">Tags</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {selectedProject.tags.map(tag => (
+                      <span key={tag} className="px-4 py-1.5 rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-xs font-mono text-black/70 dark:text-white/70 inline-block">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
 
                 <div>
                   <h4 className="text-lg font-semibold text-black dark:text-white mb-3">Links & Documents</h4>
                   <div className="flex flex-wrap gap-3">
                     {selectedProject.documents.map((doc, i) => (
-                      <a 
-                        key={i} 
-                        href={doc.url} 
-                        target="_blank" 
+                      <a
+                        key={i}
+                        href={doc.url}
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="flex-1 min-w-[120px] bg-black text-white dark:bg-white dark:text-black py-3 rounded-xl text-sm font-semibold flex items-center justify-center gap-2 hover:bg-black/80 dark:hover:bg-white/90 transition-colors"
                       >

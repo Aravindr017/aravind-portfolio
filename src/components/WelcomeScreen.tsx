@@ -28,8 +28,8 @@ export default function WelcomeScreen({ onFinish }: { onFinish: () => void }) {
   }, []);
 
   useEffect(() => {
-    const duration = 3000;
-    const interval = 50;
+    const duration = 1400;
+    const interval = 35;
     const steps = duration / interval;
     let currentStep = 0;
 
@@ -37,7 +37,7 @@ export default function WelcomeScreen({ onFinish }: { onFinish: () => void }) {
       currentStep++;
       setProgress((currentStep / steps) * 100);
 
-      if (currentStep % 8 === 0) {
+      if (currentStep % 4 === 0) {
         setCurrentMessage(prev => (prev + 1) % messages.length);
       }
 
@@ -50,18 +50,26 @@ export default function WelcomeScreen({ onFinish }: { onFinish: () => void }) {
             console.warn('Session storage failed', e);
           }
           onFinish();
-        }, 800); // Pause for 800ms at 100% before triggering exit animation
+        }, 200);
       }
     }, interval);
 
     return () => clearInterval(timer);
   }, [onFinish]);
 
+  const handleDismiss = () => {
+    try {
+      sessionStorage.setItem('welcomeShown', 'true');
+    } catch (e) {}
+    onFinish();
+  };
+
   return (
     <motion.div
+      onClick={handleDismiss}
       initial={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20, transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1] } }}
-      className="fixed inset-0 z-[9999] flex items-center justify-center bg-black"
+      exit={{ opacity: 0, y: -20, transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] } }}
+      className="fixed inset-0 z-[9999] flex items-center justify-center bg-black cursor-pointer select-none"
     >
       <div className="flex flex-col items-center gap-8 w-full max-w-md px-6">
         <div className="flex flex-col items-center justify-center min-h-[120px]">
