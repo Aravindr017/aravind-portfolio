@@ -166,10 +166,91 @@ const BioSection = () => {
 // --- Skills Matrix ---
 const SkillsMatrix = () => {
   const skills = [
-    { title: "Core Technologies", items: ["Python", "Java", "C/C++", "Data Structures", "OOPs"] },
-    { title: "Web Development", items: ["HTML5", "CSS3", "JavaScript", "React", "Node.js"] },
-    { title: "Database & Frameworks", items: ["MySQL", "PostgreSQL", "MongoDB", "Bootstrap", "Tailwind CSS"] },
-    { title: "Non-Technical", items: ["Leadership", "Teamwork", "Time Management", "Communication", "Problem Solving"] }
+    {
+      title: "AI / ML & Data Science",
+      badge: "Specialization",
+      span2: true,
+      icon: (
+        <svg className="w-5 h-5 text-indigo-500 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+        </svg>
+      ),
+      items: [
+        "TensorFlow",
+        "PyTorch",
+        "Scikit-Learn",
+        "NumPy",
+        "Pandas",
+        "Matplotlib",
+        "OpenCV",
+        "OpenAI API",
+        "NLP",
+        "RAG",
+        "GenAI",
+        "Deep Learning",
+        "Machine Learning"
+      ]
+    },
+    {
+      title: "Languages",
+      span2: false,
+      icon: (
+        <svg className="w-5 h-5 text-amber-500 dark:text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+        </svg>
+      ),
+      items: ["Python", "Java", "C++", "C", "SQL", "JavaScript", "HTML5", "CSS3"]
+    },
+    {
+      title: "Web & Frameworks",
+      span2: false,
+      icon: (
+        <svg className="w-5 h-5 text-sky-500 dark:text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-.778.099-1.533.284-2.253" />
+        </svg>
+      ),
+      items: ["React JS", "Node.js", "Next.js", "Django", "REST APIs", "WebSockets", "Tailwind CSS", "Bootstrap"]
+    },
+    {
+      title: "Databases & DevOps",
+      span2: false,
+      icon: (
+        <svg className="w-5 h-5 text-emerald-500 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 5.625c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+        </svg>
+      ),
+      items: ["MongoDB", "Firebase", "Docker", "Kubernetes", "AWS", "Vercel", "Cloudflare"]
+    },
+    {
+      title: "Core CS",
+      span2: false,
+      icon: (
+        <svg className="w-5 h-5 text-rose-500 dark:text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-5.25 6.557c0 1.25.75 2.25 1.5 2.25" />
+        </svg>
+      ),
+      items: ["Data Structures & Algorithms", "Object-Oriented Programming (OOP)", "DBMS", "Front-End Development"]
+    },
+    {
+      title: "Embedded & IoT",
+      span2: false,
+      icon: (
+        <svg className="w-5 h-5 text-purple-500 dark:text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z" />
+        </svg>
+      ),
+      items: ["Arduino", "ESP8266", "MATLAB"]
+    },
+    {
+      title: "Tools & Platforms",
+      span2: false,
+      icon: (
+        <svg className="w-5 h-5 text-teal-500 dark:text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233l2.804-2.804a2.5 2.5 0 00-3.536-3.536l-2.804 2.804m0 0L7.5 11.25" />
+        </svg>
+      ),
+      items: ["VS Code", "Jupyter Notebook", "Streamlit", "Git", "GitHub"]
+    }
   ];
 
   return (
@@ -179,24 +260,48 @@ const SkillsMatrix = () => {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-200/70 dark:bg-white/10 border border-zinc-300 dark:border-white/20 mb-4">
             <span className="text-xs font-semibold tracking-wider text-zinc-800 dark:text-white/90 uppercase">Expertise</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white mb-3">
             Technical Skill Matrix
           </h2>
+          <p className="text-zinc-600 dark:text-white/60 text-sm md:text-base max-w-xl mx-auto">
+            Comprehensive skill set across AI/ML engineering, full-stack systems, cloud infrastructure & embedded hardware.
+          </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {skills.map((category, i) => (
             <motion.div
-              key={i}
+              key={category.title}
               initial={{ opacity: 0.01, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08, ease: CUSTOM_EASING }}
-              className="p-8 md:p-10 rounded-3xl bg-white dark:bg-white/5 border border-zinc-200 dark:border-white/10 backdrop-blur-xl hover:border-zinc-300 dark:hover:border-white/20 shadow-sm dark:shadow-none transition-all duration-300"
+              transition={{ duration: 0.5, delay: i * 0.06, ease: CUSTOM_EASING }}
+              className={`p-6 sm:p-8 rounded-3xl bg-white dark:bg-white/5 border border-zinc-200 dark:border-white/10 backdrop-blur-xl hover:border-zinc-300 dark:hover:border-white/20 shadow-sm dark:shadow-none transition-all duration-300 group ${category.span2 ? "md:col-span-2" : ""
+                }`}
             >
-              <h3 className="text-2xl font-semibold mb-6 text-zinc-900 dark:text-white">{category.title}</h3>
-              <div className="flex flex-wrap gap-2.5">
+              <div className="flex items-center justify-between mb-6 flex-wrap gap-2">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-2xl bg-zinc-100 dark:bg-white/10 border border-zinc-200/80 dark:border-white/10 flex items-center justify-center group-hover:scale-105 transition-transform">
+                    {category.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-xl sm:text-2xl font-semibold text-zinc-900 dark:text-white">{category.title}</h3>
+                    {category.badge && (
+                      <span className="text-[10px] font-semibold tracking-wider uppercase text-indigo-600 dark:text-indigo-400">
+                        {category.badge}
+                      </span>
+                    )}
+                  </div>
+                </div>
+                <span className="text-xs font-medium text-zinc-500 dark:text-white/50 px-2.5 py-1 rounded-full bg-zinc-100 dark:bg-white/5 border border-zinc-200 dark:border-white/10">
+                  {category.items.length} skills
+                </span>
+              </div>
+              <div className="flex flex-wrap gap-2 sm:gap-2.5">
                 {category.items.map(skill => (
-                  <span key={skill} className="px-4 py-2 rounded-full bg-zinc-100 dark:bg-white/10 text-zinc-800 dark:text-white text-sm font-medium tracking-wide border border-zinc-200 dark:border-white/10 shadow-sm dark:shadow-none">
+                  <span
+                    key={skill}
+                    className="px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-zinc-100 dark:bg-white/10 text-zinc-800 dark:text-white text-xs sm:text-sm font-medium tracking-wide border border-zinc-200 dark:border-white/10 shadow-sm dark:shadow-none hover:border-zinc-400 dark:hover:border-white/30 hover:scale-[1.03] transition-all duration-150 cursor-default"
+                  >
                     {skill}
                   </span>
                 ))}
@@ -212,7 +317,11 @@ const SkillsMatrix = () => {
 // --- Leadership Timeline ---
 const LeadershipTimeline = () => {
   const milestones = [
+    { year: "2026", role: "AI/ML Intern", org: "ICT Academy of Kerala", desc: "Completed Certification in Artificial Intelligence & Machine Learning & Working on industry-oriented AI/ML projects." },
+    { year: "2026", role: "B.Tech Graduate", org: "College of Engineering Adoor", desc: "Completed B.Tech in Computer Science and Engineering from College of Engineering Adoor. CGPA - 8.05" },
     { year: "2025-26", role: "Student Representative", org: "IEEE PES Kerala Chapter", desc: "Organized 10+ events for 500+ participants." },
+    { year: "2025", role: "Blockchain Intern", org: "Amrita School of Artificial Intelligence", desc: "Co-developed HEXENE, a Three-Tier Blockchain Framework for Carbon Credit Trading." },
+    { year: "2024", role: "Flutter Intern", org: "Spectrum Softtech Solutions Pvt. Ltd.", desc: "Developed responsive and interactive Flutter applications." },
     { year: "2024-25", role: "MDC Travancore HUB", org: "IEEE PES Kerala Chapter", desc: "Coordinated chapter activities and workshops." },
     { year: "2024-25", role: "Student Lead 2", org: "IEDC TBI @CE Adoor", desc: "Mentored student startup projects and ideas." },
     { year: "2023", role: "Cybersecurity Intern", org: "Technovalley Pvt Ltd", desc: "MITM Attack detection using Packet Capturing." },
@@ -274,9 +383,9 @@ const MetricsAndEndorsement = () => {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-24 md:mb-32 text-center">
           {[
             { val: "83", label: "Global Rank IEEE Xtreme" },
-            { val: "8.0", label: "Current CGPA" },
-            { val: "16+", label: "Projects Completed" },
-            { val: "10+", label: "Competitions Won" },
+            { val: "8.05", label: "Current CGPA" },
+            { val: "40+", label: "Projects Completed" },
+            { val: "15+", label: "Competitions Won" },
             { val: "500+", label: "Students Trained" }
           ].map((metric, i) => (
             <motion.div
