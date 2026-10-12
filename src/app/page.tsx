@@ -94,7 +94,7 @@ const BioSection = () => {
             Building Intelligence with Purpose
           </h2>
           <p className="text-zinc-600 dark:text-white/60 text-base md:text-lg max-w-2xl mx-auto">
-            Computer Science Engineer, AI Researcher, and IEEE PES Leader dedicated to high-impact technology.
+            Computer Science Engineer and AI enthusiast dedicated to high-impact technology.
           </p>
         </div>
 
@@ -133,7 +133,7 @@ const BioSection = () => {
                 <svg className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
-                <span>IEEE PES Leader</span>
+                <span>IEEE Volunteer</span>
               </span>
             </div>
           </div>
@@ -151,7 +151,7 @@ const BioSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
                 <div className="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-white/90 dark:bg-black/60 backdrop-blur-md border border-zinc-200/80 dark:border-white/15">
                   <p className="text-xs font-semibold text-zinc-900 dark:text-white">Aravind R.</p>
-                  <p className="text-[10px] text-zinc-500 dark:text-white/60">Software Engineer • IEEE PES Leader</p>
+                  <p className="text-[10px] text-zinc-500 dark:text-white/60">Software Engineer • IEEE Volunteer</p>
                 </div>
               </div>
             </div>

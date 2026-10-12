@@ -210,6 +210,167 @@ const PROJECTS: Project[] = [
       { type: "github", url: "https://github.com/Aravindr017/AutoGlide", text: "Source Code" }
     ],
     tags: ["Embedded Systems", "Hardware"]
+  },
+  {
+    id: "skinova",
+    title: "SKINOVA AI",
+    tech: "React | FastAPI | EfficientNet-B0 | ONNX Web | Gemini AI",
+    image: "/images/SKINNOVA_AI.png",
+    description: "AI dermatological screening PWA with dual-engine cloud and offline on-device skin lesion analysis across 7 HAM10000 classes.",
+    features: [
+      "Dual-engine AI: Gemini Vision + EfficientNet-B0 consensus",
+      "100% offline on-device inference with WebAssembly (~160 ms)",
+      "Multi-stage lesion gatekeeper to block non-skin images",
+      "7-class HAM10000 classification with risk and urgency rating",
+      "RAG clinical chatbot grounded in WHO ICD-11 and DermNet knowledge",
+      "Geo-based specialist and hospital finder with OpenStreetMap",
+      "One-click clinical PDF report generator",
+      "Installable PWA with service worker offline caching"
+    ],
+    documents: [
+      { type: "external", url: "https://skinova-nu.vercel.app/", text: "Live Demo" },
+      { type: "github", url: "https://github.com/Aravindr017/SKINOVA", text: "Source Code" }
+    ],
+    tags: ["AI/ML", "Healthcare", "Computer Vision"]
+  },
+  {
+    id: "speech-command",
+    title: "Speech Command Classifier",
+    tech: "Python | Sentence Transformers | ONNX Runtime | Streamlit",
+    image: "/images/command-classifier.png",
+    description: "Offline semantic voice command classifier for automotive and IoT systems with out-of-scope rejection.",
+    features: [
+      "14 voice commands with out-of-scope rejection",
+      "INT8 quantized ONNX model (~16 MB) for edge devices",
+      "Under 100 ms inference latency on CPU",
+      "Fully offline after the first model download",
+      "Prototype-based design: add new commands without retraining",
+      "Robust to ASR noise, typos, fillers, and accent variations",
+      "Interactive Streamlit web interface"
+    ],
+    documents: [
+      { type: "external", url: "https://speech-command-classifier.streamlit.app/", text: "Live Demo" },
+      { type: "github", url: "https://github.com/Aravindr017/Lightweight-Speech-Command-Classifier-for-Edge-Deployment", text: "Source Code" }
+    ],
+    tags: ["AI/ML", "Edge AI", "NLP"]
+  },
+  {
+    id: "portugal-election",
+    title: "Portugal Election 2019 Prediction",
+    tech: "Python | scikit-learn | TensorFlow | PyTorch | Streamlit",
+    image: "/images/election-regression.png",
+    description: "ML regression project predicting final election mandates, deployed as an interactive Streamlit dashboard.",
+    features: [
+      "Compared 15+ regression models with grid and randomized search tuning",
+      "Best model: boosted KNN Regressor (R² of 0.999996)",
+      "Feature selection using Pearson correlation and mutual information",
+      "Secure login gate for the Streamlit dashboard",
+      "Real-time final mandate prediction from grouped input forms",
+      "Light and dark theme toggle with responsive layout"
+    ],
+    documents: [
+      { type: "external", url: "https://portugalelection-2019.streamlit.app/", text: "Live Demo" },
+      { type: "github", url: "https://github.com/Aravindr017/Portugal_election-2019", text: "Source Code" }
+    ],
+    tags: ["Machine Learning", "Data Science", "Streamlit"]
+  },
+  {
+    id: "restaurant-suite",
+    title: "Restaurant Management Suite",
+    tech: "VB.NET | Windows Forms | MS Access | OLEDB",
+    image: "/images/restaurant_img.png",
+    description: "Desktop restaurant POS with multi-role access, live order tracking, and a recursive login check.",
+    features: [
+      "Multi-role access: Owner, Waiter, and Customer table portal",
+      "Recursive password verification with 3-attempt lockout",
+      "Staff job application and Owner approval workflow",
+      "Dynamic table management: add tables and change seating capacity",
+      "Real-time kitchen countdown tracker with progress bars",
+      "Order lifecycle: Preparing, Ready, Served, Completed / Paid",
+      "Self-seeding Access database with Jet 4.0 and ACE fallback"
+    ],
+    documents: [
+      { type: "github", url: "https://github.com/Aravindr017/Restaurant_Management_Suite", text: "Source Code" }
+    ],
+    tags: ["Desktop", "Software Engineering", ".NET"]
+  },
+  {
+    id: "cifar-100",
+    title: "CIFAR-100 Image Classification CNN",
+    tech: "Python | TensorFlow | Keras | scikit-learn | NumPy",
+    image: "/images/cifar-100.png",
+    description: "Custom CNN built from scratch for 100-class image classification on native 32x32 CIFAR-100 images.",
+    features: [
+      "Custom 3-block CNN designed for native 32x32 inputs",
+      "Batch normalization, dropout, and L2 regularization",
+      "Data augmentation with random flip and rotation",
+      "Optimized tf.data pipeline with caching and prefetching",
+      "Mixed precision and XLA JIT compilation for faster training",
+      "AdamW optimizer with EarlyStopping and ModelCheckpoint",
+      "Confusion matrix, classification report, and per-class accuracy"
+    ],
+    documents: [
+      { type: "github", url: "https://github.com/Aravindr017/CIFAR-100_CNN_EfficientNet", text: "Source Code" }
+    ],
+    tags: ["Deep Learning", "Computer Vision", "TensorFlow"]
+  },
+  {
+    id: "solar-forecasting",
+    title: "Smart Energy Grid & Solar Forecasting",
+    tech: "Python | scikit-learn | pandas | PuLP | Streamlit",
+    image: "/images/solar-forcasting.png",
+    description: "Solar power forecasting and battery arbitrage system for smart grids. TrackGenesis internship project.",
+    features: [
+      "Day-ahead solar power forecasting at 15-minute and hourly resolution",
+      "Solar geometry, lag, and rolling irradiance feature engineering",
+      "Ridge Regression: ~48% lower daylight RMSE than persistence benchmark",
+      "Leakage-free temporal split with a StandardScaler pipeline",
+      "Physical nighttime zero-inflation for realistic predictions",
+      "PuLP linear programming for battery charge/discharge arbitrage",
+      "Streamlit dashboard with forecast benchmarking and diurnal profiling"
+    ],
+    documents: [
+      { type: "github", url: "https://github.com/Aravindr017/Smart-Energy-Grid-and-Solar-Power-Forecasting-with-Battery-Optimization", text: "Source Code" }
+    ],
+    tags: ["AI/ML", "Renewable Energy", "Smart Grid"]
+  },
+  {
+    id: "fake-news",
+    title: "Fake News Classification",
+    tech: "Python | NLTK | scikit-learn | TF-IDF | pandas",
+    image: "/images/fake-news.png",
+    description: "NLP pipeline that classifies news articles as real or fake using TF-IDF and Logistic Regression.",
+    features: [
+      "Full text cleaning: HTML, URL, punctuation, and number removal",
+      "Tokenization, stopword removal, and lemmatization with NLTK",
+      "TF-IDF vectorization with unigrams and bigrams (5,000 features)",
+      "Logistic Regression classifier in a scikit-learn Pipeline",
+      "Combined title and body text for richer context",
+      "Evaluated with accuracy, precision, recall, F1-score, and confusion matrix"
+    ],
+    documents: [
+      { type: "github", url: "https://github.com/Aravindr017/NLP_FakeNews-Classification", text: "Source Code" }
+    ],
+    tags: ["NLP", "Machine Learning", "Scikit-Learn"]
+  },
+  {
+    id: "sms-spam",
+    title: "SMS Spam Classification (RNN)",
+    tech: "Python | TensorFlow | Keras | RNN | pandas",
+    image: "/images/sms-spam.png",
+    description: "Recurrent Neural Network that classifies SMS messages as spam or ham.",
+    features: [
+      "Keras Tokenizer with a 5,000-word vocabulary and OOV handling",
+      "Sequence padding to a uniform length of 100 tokens",
+      "Stratified train/test split to handle class imbalance",
+      "Embedding + SimpleRNN + Dense architecture for binary classification",
+      "Training and validation loss/accuracy visualizations",
+      "~86.6% test accuracy achieved on held-out evaluation"
+    ],
+    documents: [
+      { type: "github", url: "https://github.com/Aravindr017/Recurrent_Neural_Network-Spam_Classification", text: "Source Code" }
+    ],
+    tags: ["Deep Learning", "RNN", "NLP"]
   }
 ];
 
@@ -246,7 +407,7 @@ export default function HorizontalMarquee() {
           <div
             className="flex gap-8 w-max px-8"
             style={{
-              animation: "marquee-horizontal 60s linear infinite",
+              animation: "marquee-horizontal 90s linear infinite",
               animationPlayState: isHovered || selectedProject ? "paused" : "running",
             }}
           >
