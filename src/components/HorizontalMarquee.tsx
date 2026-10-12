@@ -158,21 +158,25 @@ const PROJECTS: Project[] = [
   {
     id: "vakkotty-gaming",
     title: "VaKKoTTy Gaming",
-    tech: "HTML | CSS | JavaScript | Three.js",
-    image: "/images/vakkotty-gaming.jpg",
-    description: "A professional website for an eFootball gamer featuring player progression tracking, manager tactics showcase, gallery, and contact sections. Includes 3D animations.",
+    tech: "React 19 | Vite | Tailwind CSS | Three.js | Cloudflare Pages",
+    image: "/images/vakku-newweb.png",
+    description: "Official eFootball creator platform with 3D visuals, multi-language UI, and a Git-backed CMS on Cloudflare edge functions.",
     features: [
-      "Interactive 3D football animation using Three.js",
-      "Dark/light mode toggle with localStorage",
-      "Particle.js animated background",
-      "Custom player progression hub",
-      "Manager recommendation system"
+      "Player progression database with position and attribute filtering",
+      "Tactical manager guide with formations, playstyles, and boosts",
+      "Live YouTube video sync via a cached Cloudflare edge function",
+      "Multi-language support: English, Hindi, Japanese, Spanish, German",
+      "Dark neon theme with custom cursor, Framer Motion, GSAP, and Three.js 3D visuals",
+      "Secure admin CMS with Google OAuth 2.0 and HMAC-signed sessions",
+      "Git-backed publishing: edits commit JSON to GitHub, no database needed",
+      "Automatic Cloudflare cache purge on publish",
+      "Google AdSense integration with SEO metadata"
     ],
     documents: [
       { type: "external", url: "https://vakkotty.in/", text: "Live Demo" },
       { type: "github", url: "https://github.com/Aravindr017/vakkotty-client", text: "Source Code" }
     ],
-    tags: ["Frontend", "Gaming", "3D Animation"]
+    tags: ["React 19", "Cloudflare", "Gaming", "3D Animation"]
   },
   {
     id: "smart-tracker",
@@ -425,6 +429,8 @@ export default function HorizontalMarquee() {
                 <img
                   src={project.image}
                   alt={project.title}
+                  loading="lazy"
+                  decoding="async"
                   onError={(e) => { e.currentTarget.style.display = 'none'; }}
                   className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-700"
                 />

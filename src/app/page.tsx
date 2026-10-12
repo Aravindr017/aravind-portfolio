@@ -73,6 +73,8 @@ const BioSection = () => {
         <img
           src="/images/profile.jpg"
           alt="Background"
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover opacity-5 dark:opacity-10 blur-md"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-white via-white/95 to-white dark:from-black dark:via-black/90 dark:to-black transition-colors duration-300" />
@@ -145,6 +147,8 @@ const BioSection = () => {
                 <img
                   src="/images/about_me_img1.JPG"
                   alt="Aravind R"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
                   onError={(e) => { e.currentTarget.style.display = 'none'; }}
                 />
@@ -332,7 +336,7 @@ const LeadershipTimeline = () => {
   return (
     <section id="leadership" className="relative py-24 md:py-32 bg-white dark:bg-black text-zinc-900 dark:text-white overflow-hidden border-t border-zinc-200 dark:border-white/10 scroll-mt-32 transition-colors duration-300">
       <div className="absolute inset-0">
-        <img src="/images/leadershipjourney.jpg" alt="Leadership Journey" className="w-full h-full object-cover opacity-5 dark:opacity-15" />
+        <img src="/images/leadershipjourney.jpg" alt="Leadership Journey" loading="lazy" decoding="async" className="w-full h-full object-cover opacity-5 dark:opacity-15" />
         <div className="absolute inset-0 bg-gradient-to-b from-white via-white/95 to-white dark:from-black dark:via-black/85 dark:to-black transition-colors duration-300" />
       </div>
 
@@ -404,7 +408,7 @@ const MetricsAndEndorsement = () => {
 
         {/* Endorsement */}
         <div className="relative rounded-3xl overflow-hidden min-h-[360px] flex items-center justify-center border border-zinc-200 dark:border-white/15 bg-white dark:bg-black/40 shadow-lg dark:shadow-none backdrop-blur-xl">
-          <img src="/images/instrument2.jpg" alt="Endorsement Background" className="absolute w-full h-full object-cover opacity-10 dark:opacity-25" />
+          <img src="/images/instrument2.jpg" alt="Endorsement Background" loading="lazy" decoding="async" className="absolute w-full h-full object-cover opacity-10 dark:opacity-25" />
           <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-white/95 dark:from-black/90 dark:via-black/70 dark:to-black/90 transition-colors duration-300" />
           <motion.div
             initial={{ opacity: 0, y: 40 }}
