@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Aravind R | Software & AI Engineer",
-  description: "Portfolio of Aravind R - Software Engineer, AI Researcher, and IEEE Leader.",
+  description: "Portfolio of Aravind R - Software Engineer, AI Engineer.",
 };
 
 export default function RootLayout({

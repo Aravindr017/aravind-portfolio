@@ -70,7 +70,7 @@ export default function ImageSequenceHero() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
             </span>
             <span className="text-[11px] sm:text-xs font-semibold tracking-wider text-white/90 uppercase">
-              Software Engineer • AI Engineer • IEEE Leader
+              AI Engineer • Software Engineer • Full Stack Dev
             </span>
           </motion.div>
 
