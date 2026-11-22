@@ -6,23 +6,27 @@ import { AnimatePresence, motion } from "framer-motion";
 const QA_DATA = [
   {
     question: "Who are you?",
-    answer: "Hi! I am Aravind R, a Computer Science Engineer and AI/ML enthusiast. I am driven by motion, data, and impactful leadership. I've served as the Past Student Representative of the IEEE PES Kerala Chapter and love building intelligent systems."
+    answer: "Hi! I am Aravind R, a Computer Science Engineering graduate (CGPA 8.05) from College of Engineering Adoor, AI/ML Engineer, and Full-Stack Developer. I'm a passionate IEEE volunteer and past Student Representative of the IEEE PES Kerala Chapter, dedicated to building intelligent systems and impactful tech solutions."
   },
   {
     question: "What are your top projects?",
-    answer: "Some of my top projects include 'Noxus' (a predictive AI model), 'Smart Home Automation' (IoT-based energy monitoring), 'Novus' (autonomous RC plane), and 'AutoGlide' (aircraft landing system). You can check out the 'Projects' section for more details and GitHub links!"
+    answer: "Some of my flagship projects include 'SKINOVA AI' (dual-engine skin screening PWA), 'Offline Speech Command Classifier' (17MB model with 95% accuracy), 'AI Interview Coach' (real-time feedback over WebSockets), 'Noxus' (predictive AI neural network), and 'Smart Home Automation' (IoT-based energy monitoring). Explore the interactive Projects marquee section for more!"
   },
   {
     question: "What are your main achievements?",
-    answer: "I secured a Global Rank of #83 in IEEE Xtreme 18.0! I also won 1st Prize in the Idea Pitching competition at PowerConnect+ and Amrithakiranam. Additionally, I've successfully organized 10+ major IEEE events and trained over 500 students."
+    answer: "I secured Global Rank #83 in IEEE Xtreme 18.0 (among 19,000+ competitors globally). I've won 1st Prize in Idea Pitching at PowerConnect+ and Amrithakiranam Medi IQ, organized 126+ events for 1,000+ participants as IEEE PES Kerala Student Representative, and trained over 500 students in tech workshops!"
   },
   {
-    question: "How can I contact you?",
-    answer: "You can reach me via email at ar986153@gmail.com. You can also find me on LinkedIn (linkedin.com/in/aravindr017), GitHub (@Aravindr017), or Twitter (@aravindr_). Feel free to use the contact form at the bottom of the page!"
+    question: "What is your tech stack?",
+    answer: "My core expertise includes AI/ML (TensorFlow, PyTorch, Scikit-Learn, OpenCV, RAG, GenAI), Full-Stack (Next.js, React, Node.js, WebSockets, Tailwind CSS), Languages (Python, Java, C++, C, SQL, JavaScript), and Cloud/DevOps (Docker, Kubernetes, AWS, Cloudflare, MongoDB, Firebase)."
   },
   {
     question: "Where can I find your resume?",
-    answer: "You can download my resume directly using the 'Resume' button in the top navigation bar or the footer! It contains all my latest professional experiences, including my cybersecurity internship at Technovalley Pvt Ltd."
+    answer: "You can view and download my updated resume directly using the 'Resume' button in the top navigation bar or the hero section! It details my latest AI/ML and software engineering internships, technical projects, certifications, and leadership roles."
+  },
+  {
+    question: "How can I contact you?",
+    answer: "You can reach me directly via email at ar986153@gmail.com or phone (+91 6237-177-643). You can also connect with me on LinkedIn (linkedin.com/in/aravindr017) and GitHub (@Aravindr017), or send a message using the Contact form below!"
   }
 ];
 
@@ -93,7 +97,7 @@ export default function Chatbot() {
             </div>
 
             {/* Suggested Questions */}
-            <div className="p-4 bg-white dark:bg-zinc-900 border-t border-gray-100 dark:border-white/10">
+            <div className="p-4 bg-white dark:bg-zinc-900 border-t border-gray-100 dark:border-white/10 max-h-[180px] overflow-y-auto">
               <p className="text-xs text-gray-500 dark:text-white/50 mb-2 font-medium">Suggested Questions:</p>
               <div className="flex flex-col gap-2">
                 {QA_DATA.map((qa, i) => (

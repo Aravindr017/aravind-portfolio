@@ -323,7 +323,7 @@ const LeadershipTimeline = () => {
   const milestones = [
     { year: "2026", role: "AI/ML Intern", org: "ICT Academy of Kerala", desc: "Completed Certification in Artificial Intelligence & Machine Learning & Working on industry-oriented AI/ML projects." },
     { year: "2026", role: "B.Tech Graduate", org: "College of Engineering Adoor", desc: "Completed B.Tech in Computer Science and Engineering from College of Engineering Adoor. CGPA - 8.05" },
-    { year: "2025-26", role: "Student Representative", org: "IEEE PES Kerala Chapter", desc: "Organized 10+ events for 500+ participants." },
+    { year: "2025-26", role: "Student Representative", org: "IEEE PES Kerala Chapter", desc: "Organized 126+ events for 1000+ participants." },
     { year: "2025", role: "Blockchain Intern", org: "Amrita School of Artificial Intelligence", desc: "Co-developed HEXENE, a Three-Tier Blockchain Framework for Carbon Credit Trading." },
     { year: "2024", role: "Flutter Intern", org: "Spectrum Softtech Solutions Pvt. Ltd.", desc: "Developed responsive and interactive Flutter applications." },
     { year: "2024-25", role: "MDC Travancore HUB", org: "IEEE PES Kerala Chapter", desc: "Coordinated chapter activities and workshops." },

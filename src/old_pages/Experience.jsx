@@ -20,13 +20,13 @@ const Experience = () => {
 
   const experiences = [
     {
-      period: '2025 - Present',
+      period: '2025 - 2026',
       title: 'Student Representative',
       organization: 'IEEE PES Kerala Chapter',
-      description: 'Leading chapter activities and organizing events for 500+ participants across Kerala. Coordinating with student branches and planning technical workshops.',
+      description: 'Lead chapter activities and organizing events for 500+ participants across Kerala. Coordinating with student branches and planning technical workshops.',
       achievements: [
         'Organized SLT Chairs meetup at FISAT, Kochi HUB',
-        'Representing IEEE PES Kerala Chapter at various forums',
+        'Represented IEEE PES Kerala Chapter at various forums',
         'Planning flagship events for the academic year'
       ],
       icon: 'fa-solid fa-users',

@@ -94,7 +94,7 @@ const Home = () => {
             <span className="hero-greeting">👋 Hello, I'm</span>
             <h1 className="hero-title">
               Aravind R
-              <span className="hero-title-gradient">Software Engineer & IEEE Leader</span>
+              <span className="hero-title-gradient">Software Engineer & IEEE Volunteer</span>
             </h1>
             <p className="hero-description">
               Building innovative solutions and leading technical communities 
@@ -176,7 +176,7 @@ const Home = () => {
                 </div>
                 <div className="highlight-item">
                   <i className="fas fa-briefcase"></i>
-                  <span>IEEE Leader</span>
+                  <span>IEEE Volunteer</span>
                 </div>
                 <div className="highlight-item">
                   <i className="fas fa-medal"></i>
